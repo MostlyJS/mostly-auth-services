@@ -1,0 +1,53 @@
+{
+  "name": "mostly-auth-services",
+  "version": "1.0.0",
+  "description": "Authentication services for MostlyJS microservices",
+  "author": "Forafish",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm run compile",
+    "publish": "git push origin --tags && git push origin",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "compile": "rimraf -rf lib/ && babel --source-maps -d lib/ src/",
+    "watch": "babel --watch -d lib/ src/",
+    "lint": "eslint-if-supported semistandard --fix",
+    "mocha": "mocha --opts mocha.opts",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --opts mocha.opts",
+    "test": "npm run compile && npm run lint && npm run coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MostlyJS/mostly-plugins-common.git"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "bcrypt": "^1.0.2",
+    "debug": "^2.6.6",
+    "feathers-authentication": "^1.2.3",
+    "feathers-authentication-hooks": "^0.1.4",
+    "feathers-authentication-jwt": "^0.3.1",
+    "feathers-authentication-local": "^0.3.4",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-root-import": "^5.1.0",
+    "babel-preset-env": "^1.4.0",
+    "eslint-if-supported": "^1.0.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-changed": "^3.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.3.0",
+    "rimraf": "^2.6.1"
+  }
+}

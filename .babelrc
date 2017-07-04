@@ -1,0 +1,15 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node":  "current"
+      }
+    }]
+  ],
+  "plugins": [
+    ["babel-plugin-root-import", {
+      "rootPathSuffix": "lib"
+    }],
+    "babel-plugin-add-module-exports",
+  ]
+}
