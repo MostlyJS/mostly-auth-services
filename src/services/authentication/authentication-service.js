@@ -11,6 +11,6 @@ export default function(options) {
     app.configure(jwt());
     app.configure(local({ Verifier: verifier }));
 
-    app.service('authentication').hooks(defaultHooks);
+    app.service('authentication').hooks(defaultHooks(options));
   }
 };
