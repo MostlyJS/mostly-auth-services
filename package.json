@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MostlyJS/mostly-plugins-common.git"
+    "url": "git+https://github.com/MostlyJS/mostly-auth-services.git"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
