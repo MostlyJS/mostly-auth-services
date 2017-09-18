@@ -12,5 +12,5 @@ export default function(options) {
     app.configure(local({ Verifier: verifier }));
 
     app.service('authentication').hooks(defaultHooks(options));
-  }
-};
+  };
+}
