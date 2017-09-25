@@ -93,7 +93,7 @@ class LocalVerifier {
         const payload = { [`${this.options.entity}Id`]: id };
         done(null, entity, payload);
       })
-      .catch(error => error ? done(error) : done(null, error, { message: 'Invalid login' }));
+      .catch(error => error? done(error) : done(null, error, { message: 'Invalid login: ' + username }));
   }
 }
 
