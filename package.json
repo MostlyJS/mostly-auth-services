@@ -1,6 +1,6 @@
 {
   "name": "mostly-auth-services",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Authentication services for MostlyJS microservices",
   "author": "Forafish",
   "license": "MIT",
