@@ -81,7 +81,7 @@ class LocalVerifier {
     // Look up the entity
     this.service.find(params)
       .then(response => {
-        const results = response.data || response;
+        const results = response && response.data || response;
         if (!results.length) {
           debug(`a record with ${usernameField} of '${username}' did not exist`);
         }
