@@ -75,10 +75,11 @@ class LocalVerifier {
     const idField = this.options.idField || 'id';
     const usernameField = this.options.entityUsernameField || this.options.usernameField;
     const params = Object.assign({
-      'query': {
+      query: {
         [usernameField]: username,
         '$limit': 1
-      }
+      },
+      password: true
     }, omit(req.params, 'query', 'provider', 'headers', 'session', 'cookies'));
 
     // Look up the entity
