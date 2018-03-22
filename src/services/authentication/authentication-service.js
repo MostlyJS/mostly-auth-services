@@ -5,8 +5,8 @@ import defaultHooks from './authentication-hooks';
 import jwtVerifier from './jwt-verifier';
 import localVerifier from './local-verifier';
 
-export default function(options) {
-  return function(app) {
+export default function (options) {
+  return function (app) {
     app.set('auth', options);
     app.configure(auth(options));
     app.configure(jwt({ Verifier: jwtVerifier }));
