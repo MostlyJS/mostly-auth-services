@@ -1,7 +1,7 @@
 import auth from 'feathers-authentication';
 import { hooks } from 'mostly-feathers-mongoose';
 
-module.exports = function (options = {}) {
+export default function (options = {}) {
   return {
     before: {
       create: [
