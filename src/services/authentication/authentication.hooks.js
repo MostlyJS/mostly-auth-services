@@ -15,4 +15,4 @@ export default function (options = {}) {
       all: [ hooks.responder() ]
     }
   };
-};
+}

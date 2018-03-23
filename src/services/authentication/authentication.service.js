@@ -1,7 +1,8 @@
 import auth from 'feathers-authentication';
 import jwt from 'feathers-authentication-jwt';
 import local from 'feathers-authentication-local';
-import defaultHooks from './authentication-hooks';
+
+import defaultHooks from './authentication.hooks';
 import jwtVerifier from './jwt-verifier';
 import localVerifier from './local-verifier';
 

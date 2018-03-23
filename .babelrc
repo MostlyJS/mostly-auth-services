@@ -10,6 +10,6 @@
     ["babel-plugin-root-import", {
       "rootPathSuffix": "lib"
     }],
-    "babel-plugin-add-module-exports",
+    "babel-plugin-add-module-exports"
   ]
 }
