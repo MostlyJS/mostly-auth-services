@@ -1,5 +1,4 @@
 import Debug from 'debug';
-import errors from 'feathers-errors';
 import bcrypt from 'bcryptjs';
 import get from 'lodash.get';
 import omit from 'lodash.omit';
