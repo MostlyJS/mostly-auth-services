@@ -1,7 +1,7 @@
 import Debug from 'debug';
 import fp from 'mostly-func';
 
-const debug = Debug('mostly:services:authentication:jwt-verify');
+const debug = Debug('mostly:services:auth:jwt-verify');
 
 /**
  * JWT passport verifier allowing entity query params

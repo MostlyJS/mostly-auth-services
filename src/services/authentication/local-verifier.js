@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs';
 import get from 'lodash.get';
 import omit from 'lodash.omit';
 
-const debug = Debug('mostly:services:authentication:local-verify');
+const debug = Debug('mostly:services:auth:local-verify');
 
 /**
  * Local passpart verifier allowing specified idField
