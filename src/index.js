@@ -1,4 +1,4 @@
-import camelCase from 'lodash.camelcase';
+import { camelCase } from 'mostly-func';
 import glob from 'glob';
 import path from 'path';
 
