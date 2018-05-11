@@ -30,7 +30,7 @@ class JWTVerifier {
     }
 
     debug(`Looking up ${this.options.entity} by id`, id);
-    const authParams = fp.assign({}, req.params.$auth || {});
+    const authParams = { ...req.params.$auth };
     this.service.get(id, authParams).then(entity => {
       const newPayload = { [`${this.options.entity}Id`]: id };
       return done(null, entity, newPayload);
