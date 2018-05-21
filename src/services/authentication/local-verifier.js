@@ -2,6 +2,7 @@ import Debug from 'debug';
 import bcrypt from 'bcryptjs';
 import get from 'lodash.get';
 import omit from 'lodash.omit';
+import fp from 'mostly-func';
 
 const debug = Debug('mostly:services:auth:local-verify');
 
@@ -84,8 +85,8 @@ class LocalVerifier {
     // Look up the entity
     this.service.find(params)
       .then(response => {
-        const results = response && response.data || response;
-        if (!results.length) {
+        const results = fp.propOf('data', response);
+        if (fp.isEmpty(results)) {
           debug(`a record with ${usernameField} of '${username}' did not exist`);
         }
         return this._normalizeResult(response);
