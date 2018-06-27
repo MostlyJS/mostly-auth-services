@@ -5,6 +5,10 @@ MostlyJS Authentication Services
 
 Authentication services for MostlyJS microservices
 
+# Documentation
+
+Please see the [documentation site](https://mostlyjs.github.io).
+
 # Usage
 
 ## Installation
