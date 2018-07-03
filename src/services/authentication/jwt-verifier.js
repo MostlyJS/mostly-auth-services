@@ -10,7 +10,7 @@ class JWTVerifier {
   constructor (app, options = {}) {
     this.app = app;
     this.options = options;
-    this.service = typeof options.service === 'string' ? app.service(options.service) : options.service;
+    this.service = typeof options.service === 'string'? app.service(options.service) : options.service;
 
     if (!this.service) {
       throw new Error(`options.service does not exist.\n\tMake sure you are passing a valid service path or service instance and it is initialized before feathers-authentication-jwt.`);

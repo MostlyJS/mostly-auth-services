@@ -13,7 +13,7 @@ class LocalVerifier {
   constructor (app, options = {}) {
     this.app = app;
     this.options = options;
-    this.service = typeof options.service === 'string' ? app.service(options.service) : options.service;
+    this.service = typeof options.service === 'string'? app.service(options.service) : options.service;
 
     if (!this.service) {
       throw new Error(`options.service does not exist.\n\tMake sure you are passing a valid service path or service instance and it is initialized before feathers-authentication-local.`);
@@ -57,7 +57,7 @@ class LocalVerifier {
 
   _normalizeResult (results) {
     // Paginated services return the array of results in the data attribute.
-    let entities = results.data ? results.data : results;
+    let entities = results.data? results.data : results;
     let entity = entities[0];
 
     // Handle bad username.
