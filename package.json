@@ -26,7 +26,7 @@
   "dependencies": {
     "bcrypt": "^1.0.2",
     "debug": "^2.6.6",
-    "esm": "^3.0.14",
+    "esm": "^3.0.63",
     "feathers-authentication": "^1.2.3",
     "feathers-authentication-hooks": "^0.1.4",
     "feathers-authentication-jwt": "^0.3.1",
