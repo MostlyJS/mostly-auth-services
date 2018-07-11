@@ -1,8 +1,8 @@
-import Debug from 'debug';
-import bcrypt from 'bcryptjs';
-import get from 'lodash.get';
-import omit from 'lodash.omit';
-import fp from 'mostly-func';
+const Debug = require('debug');
+const bcrypt = require('bcryptjs');
+const get = require('lodash.get');
+const omit = require('lodash.omit');
+const fp = require('mostly-func');
 
 const debug = Debug('mostly:services:auth:local-verify');
 
@@ -101,4 +101,4 @@ class LocalVerifier {
   }
 }
 
-export default LocalVerifier;
+module.exports = LocalVerifier;

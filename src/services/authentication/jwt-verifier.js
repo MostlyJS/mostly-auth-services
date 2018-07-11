@@ -1,5 +1,4 @@
-import Debug from 'debug';
-import fp from 'mostly-func';
+const Debug = require('debug');
 
 const debug = Debug('mostly:services:auth:jwt-verify');
 
@@ -42,4 +41,4 @@ class JWTVerifier {
   }
 }
 
-export default JWTVerifier;
+module.exports = JWTVerifier;

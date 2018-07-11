@@ -1,7 +1,7 @@
-import auth from 'feathers-authentication';
-import { hooks } from 'mostly-feathers-mongoose';
+const auth = require('feathers-authentication');
+const { hooks } = require('mostly-feathers-mongoose');
 
-export default function (options = {}) {
+module.exports = function (options = {}) {
   return {
     before: {
       create: [
@@ -15,4 +15,4 @@ export default function (options = {}) {
       all: [ hooks.responder() ]
     }
   };
-}
+};

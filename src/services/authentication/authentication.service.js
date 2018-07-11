@@ -1,12 +1,12 @@
-import auth from 'feathers-authentication';
-import jwt from 'feathers-authentication-jwt';
-import local from 'feathers-authentication-local';
+const auth = require('feathers-authentication');
+const jwt = require('feathers-authentication-jwt');
+const local = require('feathers-authentication-local');
 
-import defaultHooks from './authentication.hooks';
-import jwtVerifier from './jwt-verifier';
-import localVerifier from './local-verifier';
+const defaultHooks = require('./authentication.hooks');
+const jwtVerifier = require('./jwt-verifier');
+const localVerifier = require('./local-verifier');
 
-export default function (options) {
+module.exports = function (options) {
   return function (app) {
     app.set('auth', options);
     app.configure(auth(options));
@@ -15,4 +15,4 @@ export default function (options) {
 
     app.service('authentication').hooks(defaultHooks(options));
   };
-}
+};
