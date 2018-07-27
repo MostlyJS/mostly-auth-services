@@ -2,7 +2,11 @@
   "name": "mostly-auth-services",
   "version": "1.1.1",
   "description": "Authentication services for MostlyJS microservices",
-  "author": "Forafish",
+  "author": {
+    "name": "mostly",
+    "email": "hello@playingio.com",
+    "url": "https://mostlyjs.github.com"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": {
